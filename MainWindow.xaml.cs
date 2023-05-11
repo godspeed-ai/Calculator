@@ -124,6 +124,18 @@ namespace Calculator
             if (txtNumber.Text.IndexOf(".") == -1)
                 txtNumber.Text = txtNumber.Text + ".";
         }
+
+        private void b1_Click(object sender, RoutedEventArgs e)
+        {
+            txtNumber.Text =Convert.ToString(Int32.Parse(txtNumber.Text)*0.01);
+        }
+
+        private void b2_Click(object sender, RoutedEventArgs e)
+        {
+            int X = txtNumber.Text.Length;
+            txtNumber.Text = txtNumber.Text.Substring(0,X-1);
+        }
+
         private void btnEqual_Click(object sender, RoutedEventArgs e)
         {
             float finalResults = 0f; //宣告最後計算結果變數
